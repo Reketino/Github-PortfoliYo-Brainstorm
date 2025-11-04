@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center text-white relative" style={{ backgroundImage: "url('/desktop.jpg')" }}>
-      <h1 className="text-4xl font-bold top-0">Welcome to My Portfolio</h1>
+      <h1 className="text-4xl font-bold absolute top-10 transform">Welcome to My Portfolio</h1>
       <div className="flex flex-col items-start gap-8 fixed left-10 top-1/4">
         
         <div
