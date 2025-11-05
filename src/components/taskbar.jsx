@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 export default function Taskbar() {
@@ -27,6 +27,10 @@ export default function Taskbar() {
       <div className="flex items-center gap-2 cursor-pointer hover:bg-white/10 px-3 py-1 rounded-md transition">
         <span className="text-lg">🪟</span>
         <span className="text-sm font-medium hidden sm:block">Start</span>
+      </div>
+
+      <div className="absolute left-1/2 -translate-x-1/2 hover:bg-white/20 transition rounded-md">
+        <Link href="https://github.com/Reketino" className="mx-2 text-sm">&copy; {new Date().getFullYear()} Reketino</Link>
       </div>
 
  
