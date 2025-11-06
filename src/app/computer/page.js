@@ -16,9 +16,7 @@ export default function App() {
         Reketino's Homepage
       </h1>
 
-     
       <div className="flex flex-col items-start gap-8 fixed left-10 top-1/4">
-       
         <div
           className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => setOpenApp("about")}
@@ -26,7 +24,6 @@ export default function App() {
           <span className="text-6xl">📖</span>
           <p className="mt-2 text-sm">Beareven.txt</p>
         </div>
-
 
         <div
           className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
@@ -36,7 +33,8 @@ export default function App() {
           <p className="mt-2 text-sm">Prosjekter</p>
         </div>
 
-        <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+        <div
+          className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => setOpenApp("Spotify")}
         >
           <Image
@@ -49,7 +47,8 @@ export default function App() {
           <p className="mt-2 text-sm text-center">Spotify</p>
         </div>
 
-        <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+        <div
+          className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
           onClick={() => setOpenApp("Flappy Bird")}
         >
           <Image
@@ -82,29 +81,30 @@ export default function App() {
             <div className="space-y-2 text-sm leading-relaxed">
               <p>Hei 👋 Jeg heter Bjørn Even Lyngstad.</p>
               <p>
-                Jeg har hoppet inn i kodingens verden og elsker å skape ting på nettet.
+                Jeg har hoppet inn i kodingens verden og elsker å skape ting på
+                nettet.
               </p>
               <p>
                 På denne siden kan du utforske noen av mine prosjekter og
                 interesser.
               </p>
-              <p>Jeg har erfaring med flere programmeringsspråk og rammeverk.</p>
+              <p>
+                Jeg har erfaring med flere programmeringsspråk og rammeverk.
+              </p>
               <p> Blant annet:</p>
             </div>
           )}
 
-          
-
-       
           {openApp === "prosjekter" && (
             <div className="grid grid-cols-3 gap-6 justify-items-center">
-              
               <div
                 className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => setOpenApp("project1")}
               >
                 <span className="text-5xl">⛰️</span>
-                <p className="mt-1 text-sm text-center">Planlegger du en fjelltur?</p>
+                <p className="mt-1 text-sm text-center">
+                  Planlegger du en fjelltur?
+                </p>
               </div>
 
               <div
@@ -112,7 +112,9 @@ export default function App() {
                 onClick={() => setOpenApp("project2")}
               >
                 <span className="text-5xl">💇🏻</span>
-                <p className="mt-1 text-sm text-center">Eller kanskje du skulle vært hos frisøren?</p>
+                <p className="mt-1 text-sm text-center">
+                  Eller kanskje du skulle vært hos frisøren?
+                </p>
               </div>
 
               <div
@@ -120,56 +122,55 @@ export default function App() {
                 onClick={() => setOpenApp("project3")}
               >
                 <span className="text-5xl">🔮</span>
-                <p className="mt-1 text-sm text-center">Hva med et visdomsord før du bestemmer deg?</p>
+                <p className="mt-1 text-sm text-center">
+                  Hva med et visdomsord før du bestemmer deg?
+                </p>
               </div>
             </div>
-          )}  
+          )}
         </div>
       )}
-         {openApp === "project1" && (
-              <Fullskjerm
-                url="https://fjellturer.vercel.app/"
-                title="Fjellturer Nettside"
-                onBack={() => setOpenApp("projects")}
-              />
-          )}
+      {openApp === "project1" && (
+        <Fullskjerm
+          url="https://fjellturer.vercel.app/"
+          title="Fjellturer Nettside"
+          onBack={() => setOpenApp("prosjekter")}
+        />
+      )}
 
-          {openApp === "project2" && (
-              <Fullskjerm
-                url="https://kjodes-frisor.vercel.app/"
-                title="Frisør Booking"
-                onBack={() => setOpenApp("projects")}
-              />
-          )}
+      {openApp === "project2" && (
+        <Fullskjerm
+          url="https://kjodes-frisor.vercel.app/"
+          title="Frisør Booking"
+          onBack={() => setOpenApp("prosjekter")}
+        />
+      )}
 
-          {openApp === "project3" && (
-            <Fullskjerm
-              url="https://reketino-s-word-of-wisdom-31dr.vercel.app/"
-              title="Visdomsord"
-              onBack={() => setOpenApp("projects")}
-            />
-          )}
+      {openApp === "project3" && (
+        <Fullskjerm
+          url="https://reketino-s-word-of-wisdom-31dr.vercel.app/"
+          title="Visdomsord"
+          onBack={() => setOpenApp("prosjekter")}
+        />
+      )}
 
-          {openApp === "Spotify" && (
-            <Fullskjerm
-              url="https://open.spotify.com/embed/playlist/5fWaijV0GmLzP9KFydh712?utm_source=generator"
-              title="Spotify"
-              onBack={() => setOpenApp(null)}
-            />
-          )}
+      {openApp === "Spotify" && (
+        <Fullskjerm
+          url="https://open.spotify.com/embed/playlist/5fWaijV0GmLzP9KFydh712?utm_source=generator"
+          title="Spotify"
+          onBack={() => setOpenApp(null)}
+        />
+      )}
 
-          {openApp === "Flappy Bird" && (
-            <Fullskjerm
-              url="https://flappy-bird-ruby-nine.vercel.app/"
-              title="Flappy Bird"
-              onBack={() => setOpenApp(null)}
-            />
-          )}
+      {openApp === "Flappy Bird" && (
+        <Fullskjerm
+          url="https://flappy-bird-ruby-nine.vercel.app/"
+          title="Flappy Bird"
+          onBack={() => setOpenApp(null)}
+        />
+      )}
 
-    
       <Taskbar />
     </main>
   );
 }
-      
-      
