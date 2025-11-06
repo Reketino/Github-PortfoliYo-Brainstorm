@@ -24,16 +24,16 @@ export default function App() {
           onClick={() => setOpenApp("about")}
         >
           <span className="text-6xl">📖</span>
-          <p className="mt-2 text-sm">Hvem er jeg?</p>
+          <p className="mt-2 text-sm">Beareven.txt</p>
         </div>
 
 
         <div
           className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
-          onClick={() => setOpenApp("projects")}
+          onClick={() => setOpenApp("prosjekter")}
         >
           <span className="text-6xl">📂</span>
-          <p className="mt-2 text-sm">Projekter</p>
+          <p className="mt-2 text-sm">Prosjekter</p>
         </div>
 
         <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
@@ -67,8 +67,8 @@ export default function App() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 text-white rounded-xl shadow-2xl w-[90%] max-w-md  p-6 z-10 animate-fadeIn">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold">
-              {openApp === "about" && "About Me"}
-              {openApp === "projects" && "Projects Folder"}
+              {openApp === "about" && "Om Meg"}
+              {openApp === "prosjekter" && "Mine Prosjekter"}
             </h2>
             <button
               onClick={() => setOpenApp(null)}
@@ -91,7 +91,7 @@ export default function App() {
           
 
        
-          {openApp === "projects" && (
+          {openApp === "prosjekter" && (
             <div className="grid grid-cols-3 gap-6 justify-items-center">
               
               <div
