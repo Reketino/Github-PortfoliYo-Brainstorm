@@ -12,8 +12,8 @@ export default function App() {
       className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center text-white relative"
       style={{ backgroundImage: "url('/desktop.jpg')" }}
     >
-      <h1 className="text-4xl font-bold absolute top-10 transform">
-        Welcome to My Portfolio
+      <h1 className="text-4xl text-amber-100 mix-blend-screen font-bold absolute top-10 transform opacity-90">
+        Reketino's Homepage
       </h1>
 
      
@@ -80,11 +80,16 @@ export default function App() {
 
           {openApp === "about" && (
             <div className="space-y-2 text-sm leading-relaxed">
-              <p>Hei 👋 Jeg heter [navnet ditt].</p>
+              <p>Hei 👋 Jeg heter Bjørn Even Lyngstad.</p>
               <p>
-                Jeg er en [rolle] med interesse for webutvikling, design og læring
-                gjennom prosjekter. Dette er min lille “digitale bok”.
+                Jeg har hoppet inn i kodingens verden og elsker å skape ting på nettet.
               </p>
+              <p>
+                På denne siden kan du utforske noen av mine prosjekter og
+                interesser.
+              </p>
+              <p>Jeg har erfaring med flere programmeringsspråk og rammeverk.</p>
+              <p> Blant annet:</p>
             </div>
           )}
 
