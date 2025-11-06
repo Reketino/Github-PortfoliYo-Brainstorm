@@ -40,7 +40,7 @@ export default function App() {
           onClick={() => setOpenApp("Spotify")}
         >
           <Image
-            src="/spotify.png"
+            src="/spoti.png"
             alt="Spotify Icon"
             width={64}
             height={64}
