@@ -37,7 +37,7 @@ export default function App() {
       </div>
 
       {openApp && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-black rounded-xl shadow-2xl w-[90%] max-w-lg p-6 z-10 animate-fadeIn">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 text-white rounded-xl shadow-2xl w-[90%] max-w-md  p-6 z-10 animate-fadeIn">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold">
               {openApp === "about" && "About Me"}
@@ -89,10 +89,10 @@ export default function App() {
                 <p className="mt-1 text-sm text-center">Hva med et visdomsord før du bestemmer deg?</p>
               </div>
             </div>
-          )}
-           
-
-          {openApp === "project1" && (
+          )}  
+        </div>
+      )}
+         {openApp === "project1" && (
               <Fullskjerm
                 url="https://fjellturer.vercel.app/"
                 title="Fjellturer Nettside"
@@ -101,8 +101,8 @@ export default function App() {
           )}
 
           {openApp === "project2" && (
-              <iframe
-                src="https://kjodes-frisor.vercel.app/"
+              <Fullskjerm
+                url="https://kjodes-frisor.vercel.app/"
                 title="Frisør Booking"
                 onBack={() => setOpenApp("projects")}
               />
@@ -115,8 +115,6 @@ export default function App() {
               onBack={() => setOpenApp("projects")}
             />
           )}
-        </div>
-      )}
 
     
       <Taskbar />
