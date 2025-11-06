@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import Taskbar from "@/components/taskbar";
 import Fullskjerm from "@/components/fullskjerm";
@@ -34,6 +35,32 @@ export default function App() {
           <span className="text-6xl">📂</span>
           <p className="mt-2 text-sm">Projekter</p>
         </div>
+
+        <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => setOpenApp("Spotify")}
+        >
+          <Image
+            src="/spotify.png"
+            alt="Spotify Icon"
+            width={64}
+            height={64}
+            className="hover-glow rounded-lg"
+          />
+          <p className="mt-2 text-sm text-center">Spotify</p>
+        </div>
+
+        <div className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => setOpenApp("Flappy Bird")}
+        >
+          <Image
+            src="/flappy.png"
+            alt="Flappy Bird Icon"
+            width={64}
+            height={64}
+            className="hover-glow rounded-lg"
+          />
+          <p className="mt-2 text-sm text-center">Flappy Bird</p>
+        </div>
       </div>
 
       {openApp && (
@@ -60,6 +87,8 @@ export default function App() {
               </p>
             </div>
           )}
+
+          
 
        
           {openApp === "projects" && (
@@ -113,6 +142,22 @@ export default function App() {
               url="https://reketino-s-word-of-wisdom-31dr.vercel.app/"
               title="Visdomsord"
               onBack={() => setOpenApp("projects")}
+            />
+          )}
+
+          {openApp === "Spotify" && (
+            <Fullskjerm
+              url="https://open.spotify.com/embed/playlist/5fWaijV0GmLzP9KFydh712?utm_source=generator"
+              title="Spotify"
+              onBack={() => setOpenApp(null)}
+            />
+          )}
+
+          {openApp === "Flappy Bird" && (
+            <Fullskjerm
+              url="https://flappy-bird-ruby-nine.vercel.app/"
+              title="Flappy Bird"
+              onBack={() => setOpenApp(null)}
             />
           )}
 
