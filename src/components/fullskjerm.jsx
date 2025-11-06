@@ -1,34 +1,39 @@
 import React, {useState}  from 'react'
 
-export default function Fullskjerm({ url, tittel, onBack }) {
+export default function Fullskjerm({ url, title, onBack }) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   return (
-    <div className={`flex flex-col bg-white text-black rounded-xl shadow2xl ${isFullscreen ? 'fixed inset-0 w-full h-full z-50 p-4' : '-[70vh] w-[90%] max-w-lg'}
-    transition-all duration-300`}>
-
-        <div className='flex justify-between items-center mb-2'>
+    <div className={`${isFullscreen ? 'fixed inset-0' 
+    : 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%]'}
+     bg-gray-900 z-50 rounded-lg shadow-2xl flex flex-col transition-all duration-500 `}
+     >
+        <div className='flex justify-between items-center bg-gray-800 px-4 py-2 text-white'>
+          <h2 className='text-lg font-semibold'>{title}</h2>
+          
+          <div className='flex gap-2'>
             <button
             onClick={onBack}
-            className='text-sm text-blue-500 underline'
+            className='text-sm text-white underline'
             >
-              ← Tilbake  
+              ⬅Tilbake  
             </button>
 
             <button
             onClick={() => setIsFullscreen(!isFullscreen)}
-            className='text-sm text-blue-500 underline'
+            className='text-sm text-white underline'
             >
-              {isFullscreen ? 'Avslutt fullskjerm' : 'Fullskjerm'}
+              {isFullscreen ? '⧉' : '🗖'}
             </button>
         </div>
+        </div>
 
-        <h3 className='font-bold text-center mb-2'> {tittel}</h3>
 
         <iframe
+        id ='iframe-fullscreen'
         src={url}
-        className='flex-1 w-full h-full rounded-lg border border-gray-700'
-        title={tittel}
+        className='flex-1 w-full h-full rounded-none border-none'
+        title={title}
         />
       
     </div>
