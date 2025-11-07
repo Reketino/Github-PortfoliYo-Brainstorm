@@ -22,7 +22,7 @@ export default function Taskbar() {
   });
 
   return (
-    <div className="fixed bottom-0 left-0 w-full backdrop-blur-md bg-white/10 border-t border-white/20 shadow-[0_-2px_10px_rgba(0,0,0,0.2)] text-white px-4 py-2 flex items-center justify-between z-50">
+    <div className="taskbar fixed bottom-0 left-0 w-full backdrop-blur-md bg-white/10 border-t border-white/20 shadow-[0_-2px_10px_rgba(0,0,0,0.2)] text-white px-4 py-2 flex items-center justify-between z-50">
      
       <div className="flex items-center gap-2 cursor-pointer hover:bg-white/10 px-3 py-1 rounded-md transition">
         <span className="text-lg">🪟</span>
