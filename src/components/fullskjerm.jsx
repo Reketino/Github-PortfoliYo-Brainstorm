@@ -7,7 +7,7 @@ export default function Fullskjerm({ url, title, onBack }) {
     <div
       className={`${
         isFullscreen
-          ? "fixed inset-0"
+          ? "fixed inset-0 pb-(--taskbar-height)"
           : "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%]"
       }
      bg-gray-900 z-50 rounded-lg shadow-2xl flex flex-col transition-all duration-500 `}
@@ -34,8 +34,9 @@ export default function Fullskjerm({ url, title, onBack }) {
       <iframe
         id="iframe-fullscreen"
         src={url}
-        className="flex-1 w-full h-full rounded-none border-none"
+        className="flex-1 w-full h-full rounded-none border-none z-50"
         title={title}
+        style={{ height: "calc(100vh - var(--taskbar-height))" }}
       />
     </div>
   );
